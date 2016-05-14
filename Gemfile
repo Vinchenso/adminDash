@@ -38,10 +38,14 @@ group :development, :test do
     gem 'table_print'
     gem 'better_errors'
     gem 'cucumber-rails', require: false
+    gem 'capybara'
     gem 'database_cleaner'
     gem 'rails-footnotes', '~> 4.0'
     gem 'meta_request'
     gem 'quiet_assets'
+    gem "spring-commands-cucumber"
+    gem 'spring-commands-rspec'
+    gem 'rspec'
 end
 
 group :development do
