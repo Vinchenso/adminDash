@@ -5,4 +5,6 @@ class PagesController < ApplicationController
   def blank
   end
 
+  def homepage
+  end
 end
