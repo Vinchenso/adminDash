@@ -1,8 +1,9 @@
 class CreateStatements < ActiveRecord::Migration
   def change
     create_table :statements do |t|
+      t.string :name
+      t.string :description
 
-      t.references :lineitem, index: true
       t.timestamps null: false
     end
   end

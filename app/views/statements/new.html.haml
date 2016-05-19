@@ -1,0 +1,10 @@
+= simple_form_for @statement do |f|
+  = f.input :name 
+  = f.input :description
+  %h3 Line Items 
+  #lineitem
+    = f.simple_fields_for :lineitems do |lineitem|
+      = render '/statements/lineitem_fields', f: lineitem
+    .links
+      = link_to_add_association 'Add Line Item', f, :lineitems
+  = f.button :submit 
