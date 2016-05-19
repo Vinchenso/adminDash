@@ -1,2 +1,19 @@
-<h1>Porfolio#new</h1>
-<p>Find me in app/views/porfolio/new.html.erb</p>
+<%= simple_for_for @statement do |f| %>
+  <%= f.input :month %>
+  <%= f.association :building %>
+  <%= f.association :property %>
+  <%= f.association :tenant %>
+  <%= f.input :opening_balance %>
+  <%= f.input :rent %>
+  <%= f.input :water %>
+  <%= f.input :refuse %>
+  <%= f.input :sewerage %>
+  <%= f.input :vat %>
+  <%= f.input :water_recieved %>
+  <%= f.input :rent_recieved %>
+  <%= f.input :closing_balance %>
+  <%= f.input :commission %>
+  <%= f.input :rates_paid %>
+  <%= f.input :payment_for_owner %>
+  <%= f.button :submit %>
+<%= end %>

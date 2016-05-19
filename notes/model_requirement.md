@@ -15,7 +15,7 @@
   - Property_ID
 
 
-- Billings  
+- Statements
   - Category_ID
   - Amount
   - Date

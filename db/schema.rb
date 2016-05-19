@@ -11,6 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160519081804) do
+
+  create_table "lineitems", force: :cascade do |t|
+    t.integer  "amount"
+    t.date     "date"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "statements", force: :cascade do |t|
+    t.integer  "lineitem_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.string   "detail"
+  end
+
+  add_index "statements", ["lineitem_id"], name: "index_statements_on_lineitem_id"
 
 end
