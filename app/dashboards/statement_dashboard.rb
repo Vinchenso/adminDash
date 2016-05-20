@@ -10,7 +10,8 @@ class StatementDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     lineitems: Field::HasMany,
     id: Field::Number,
-    lineitem_id: Field::Number,
+    name: Field::String,
+    description: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -23,8 +24,8 @@ class StatementDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :lineitems,
     :id,
-    :lineitem_id,
-    :created_at,
+    :name,
+    :description,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -32,7 +33,8 @@ class StatementDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :lineitems,
     :id,
-    :lineitem_id,
+    :name,
+    :description,
     :created_at,
     :updated_at,
   ].freeze
@@ -42,7 +44,8 @@ class StatementDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :lineitems,
-    :lineitem_id,
+    :name,
+    :description,
   ].freeze
 
   # Overwrite this method to customize how statements are displayed

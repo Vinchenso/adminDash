@@ -10,9 +10,8 @@ class LineitemDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     statement: Field::BelongsTo,
     id: Field::Number,
-    amount: Field::Number,
-    date: Field::DateTime,
-    description: Field::Text,
+    description: Field::String,
+    amount: Field::String.with_options(searchable: false),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -25,8 +24,8 @@ class LineitemDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :statement,
     :id,
+    :description,
     :amount,
-    :date,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -34,9 +33,8 @@ class LineitemDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :statement,
     :id,
-    :amount,
-    :date,
     :description,
+    :amount,
     :created_at,
     :updated_at,
   ].freeze
@@ -46,9 +44,8 @@ class LineitemDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :statement,
-    :amount,
-    :date,
     :description,
+    :amount,
   ].freeze
 
   # Overwrite this method to customize how lineitems are displayed

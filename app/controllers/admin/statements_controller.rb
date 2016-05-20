@@ -1,13 +1,19 @@
 module Admin
   class StatementsController < Admin::ApplicationController
-    def new
-      @statement = Statement.new
-      @statement.lineitems.build
-    end
+    # To customize the behavior of this controller,
+    # simply overwrite any of the RESTful actions. For example:
+    #
+    # def index
+    #   super
+    #   @resources = Statement.all.paginate(10, params[:page])
+    # end
 
-    def edit
-      @statement = current_user.statements.find params[:id]
-      @statement.lineitems.build
-    end
+    # Define a custom finder by overriding the `find_resource` method:
+    # def find_resource(param)
+    #   Statement.find_by!(slug: param)
+    # end
+
+    # See https://administrate-docs.herokuapp.com/customizing_controller_actions
+    # for more information
   end
 end

@@ -7,6 +7,7 @@ class StatementsController < ApplicationController
 
   def new
     @statement = Statement.new
+    @initial_fields = initialize_form
   end
 
   def create
