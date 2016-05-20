@@ -1,0 +1,19 @@
+%h3 Statements
+%table
+  %tr
+    %td Name
+    %td Description
+  %tr
+    %td= @statement.name
+    %td= @statement.description
+%h3 List of all a line items
+%table
+  %tr
+    %td Description
+    %td Amount
+    - @statement.lineitems.each do |lineitem|
+      %tr
+        %td=lineitem.description
+        %td=lineitem.amount
+
+
