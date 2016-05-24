@@ -1,0 +1,5 @@
+- @default_line_items.each do |default_values|
+ = f.simple_fields_for :lineitems do |f|
+  .nested-fields
+   = f.input :description, :input_html => { :value => default_values }
+   = f.input :amount

@@ -7,7 +7,19 @@ class StatementsController < ApplicationController
 
   def new
     @statement = Statement.new
-    @initial_fields = initialize_form
+    @statement.lineitems.build
+    @default_line_items = [ "Opening Balance",
+                            "Rent",
+                            "Water",
+                            "Sewerage",
+                            "Refuse",
+                            "VAT",
+                            "Rent Recieved",
+                            "Muncipal Recieved",
+                            "Closing Balance",
+                            "Collection Commission",
+                            "Rates Payover",
+                            "Payment to Owner"]
   end
 
   def create
