@@ -36,9 +36,19 @@ class StatementsController < ApplicationController
 
   def destroy
     @statement.destroy
+    redirect_to statements_url
   end
 
   def edit
+    @default_line_items = []
+  end
+
+  def update
+    if @statement.update_attributes(statement_params)
+      redirect_to @statement
+    else
+      render action: "edit"
+    end
   end
 
   def set_statement

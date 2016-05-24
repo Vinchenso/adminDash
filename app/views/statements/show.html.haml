@@ -6,7 +6,7 @@
   %tr
     %td= @statement.name
     %td= @statement.description
-%h3 List of all a line items
+%h3 Line Item list
 %table.table.table-bordered.table-hover.dataTable{"aria-describedby" => "example2_info", :role => "grid"}
   %tr
     %td Description
@@ -16,4 +16,6 @@
         %td=lineitem.description
         %td=lineitem.amount
 
-
+= link_to 'Edit', edit_statement_path(@statement)
+= '|'
+= link_to 'Back', statement_path
