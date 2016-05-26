@@ -55,6 +55,7 @@ GEM
     autoprefixer-rails (6.3.6)
       execjs
     awesome_print (1.6.1)
+    bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -77,6 +78,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    clearance (1.13.0)
+      bcrypt
+      email_validator (~> 1.4)
+      rails (>= 3.1)
     cocoon (1.2.9)
     coderay (1.1.1)
     coffee-rails (4.1.1)
@@ -109,6 +114,8 @@ GEM
       momentjs-rails (>= 2.8.1)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
+    email_validator (1.6.0)
+      activemodel
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.7.0)
@@ -264,6 +271,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   byebug
   capybara
+  clearance
   cocoon
   coffee-rails (~> 4.1.0)
   cucumber-rails

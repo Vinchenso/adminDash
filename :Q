@@ -1,1 +1,0 @@
-<%= link_to 'Add New Data', porfolio_new_path %>

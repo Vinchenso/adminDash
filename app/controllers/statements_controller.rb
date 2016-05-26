@@ -1,5 +1,6 @@
 class StatementsController < ApplicationController
   before_action :set_statement, only: [:show, :edit, :update, :destroy]
+  before_action :require_login
 
   def index
     @statement = Statement.all
